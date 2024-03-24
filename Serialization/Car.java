@@ -39,19 +39,19 @@ public class Car implements Serializable {
     public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
         Car toyota = new Car("Toyota", 2021);
         Car honda = new Car("Honda", 2020);
-//serialization
+        //serialization
         FileOutputStream fileOutputStream = new FileOutputStream("cars.txt");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(toyota);
         objectOutputStream.writeObject(honda);
 
-//deserialization
+        //deserialization
         FileInputStream fileInputStream = new FileInputStream("cars.txt");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         Car toyotaCopy = (Car) objectInputStream.readObject();
         Car hondaCopy = (Car) objectInputStream.readObject();
 
-//comparing serialized objects with original ones
+        //comparing serialized objects with original ones
         boolean isSameObject = toyotaCopy == toyota;
         System.out.println("Toyota (Copy) - "+toyotaCopy);
         System.out.println("Toyota (Original) - "+toyota);
