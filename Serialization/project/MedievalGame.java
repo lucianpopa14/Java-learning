@@ -8,7 +8,7 @@ public class MedievalGame {
     /* Instance Variables */
     private Player player;
 
-    /* Main Method */
+//    this is the main method
     public static void main(String[] args) {
 
         Scanner console = new Scanner(System.in);
