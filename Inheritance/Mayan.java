@@ -1,4 +1,4 @@
-package LanguageInheritance;
+package Inheritance;
 
 public class Mayan extends Language{
     public Mayan(String name, Integer numSpeakers) {

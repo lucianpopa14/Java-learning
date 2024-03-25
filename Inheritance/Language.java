@@ -1,4 +1,4 @@
-package LanguageInheritance;
+package Inheritance;
 
 public class Language {
     protected String name;

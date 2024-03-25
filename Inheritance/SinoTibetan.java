@@ -1,4 +1,4 @@
-package LanguageInheritance;
+package Inheritance;
 
 public class SinoTibetan extends Language{
     SinoTibetan(String name, Integer numSpeakers){
