@@ -1,4 +1,4 @@
-package Serialization;
+package src.main.Serialization;
 
 public class Engine {
     private double liters;

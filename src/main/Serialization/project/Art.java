@@ -1,4 +1,4 @@
-package Serialization.project;
+package src.main.Serialization.project;
 
 public class Art {
     public static void homeScreen() {

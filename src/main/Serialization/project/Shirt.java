@@ -1,16 +1,16 @@
-package Serialization.project;
+package src.main.Serialization.project;
 
 import java.io.Serial;
 import java.io.Serializable;
 
-public class Trouser extends Armour implements Serializable {
+public class Shirt extends Armour implements Serializable {
 
     /* Class Variables */
     @Serial
     private static final long serialVersionUID = 1L;
 
     /* Constructors */
-    public Trouser(String name, int durability, int defenseRating) {
+    public Shirt(String name, int durability, int defenseRating) {
         super(name, durability, defenseRating);
     }
 }

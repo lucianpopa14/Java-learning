@@ -1,4 +1,4 @@
-package Serialization.project;
+package src.main.Serialization.project;
 
 import java.io.Serial;
 import java.io.Serializable;

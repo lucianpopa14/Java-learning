@@ -1,4 +1,4 @@
-package Serialization;
+package src.main.Serialization;
 
 import java.io.*;
 
@@ -40,13 +40,13 @@ public class Car implements Serializable {
         Car toyota = new Car("Toyota", 2021);
         Car honda = new Car("Honda", 2020);
         //serialization
-        FileOutputStream fileOutputStream = new FileOutputStream("cars.txt");
+        FileOutputStream fileOutputStream = new FileOutputStream("src/main/cars.txt");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(toyota);
         objectOutputStream.writeObject(honda);
 
         //deserialization
-        FileInputStream fileInputStream = new FileInputStream("cars.txt");
+        FileInputStream fileInputStream = new FileInputStream("src/main/cars.txt");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         Car toyotaCopy = (Car) objectInputStream.readObject();
         Car hondaCopy = (Car) objectInputStream.readObject();

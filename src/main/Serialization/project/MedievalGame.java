@@ -1,4 +1,4 @@
-package Serialization.project;
+package src.main.Serialization.project;
 
 import java.io.*;
 import java.util.Scanner;
@@ -73,7 +73,7 @@ public class MedievalGame {
 
     private void save() {
         // Add save functionality here
-        String fileName = "Player.svr";
+        String fileName = "src/main/Player.svr";
         try {
             FileOutputStream userSaveFile = new FileOutputStream(fileName);
             ObjectOutputStream playerSaver = new ObjectOutputStream(userSaveFile);
