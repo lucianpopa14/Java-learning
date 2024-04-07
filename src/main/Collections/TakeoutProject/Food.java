@@ -11,27 +11,33 @@ public class Food implements PricedItem<Integer> {
         this.price = price;
     }
 
+    @Override
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    @Override
+    public Integer getPrice() {
+        return price;
+    }
+    @Override
+    public String toString() {
+        return "Enjoy " + this.name + ": " + this.description + "       Cost: " + this.price;
+
+    }
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
         return description;
     }
 
-    @Override
-    public Integer getPrice() {
-        return null;
-    }
-
-    @Override
-    public String toString() {
-        System.out.println("Enjoy "+this.name+": "+this.description+"       Cost: "+this.price);
-        return null;
-    }
-
-    @Override
-    public Integer setPrice(Integer price) {
-        return null;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

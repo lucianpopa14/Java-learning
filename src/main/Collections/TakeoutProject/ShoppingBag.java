@@ -7,7 +7,7 @@ public class ShoppingBag<T extends PricedItem<Integer>> {
     private Map<T, Integer> shoppingBag;
 
     public ShoppingBag() {
-        this.shoppingBag = new HashMap<>();
+        shoppingBag = new HashMap<>();
     }
 
     public void addItem(T item) {
@@ -16,13 +16,12 @@ public class ShoppingBag<T extends PricedItem<Integer>> {
 
 
     public Integer getTotalPrice() {
-        Integer grandTotal = 0;
+        int total = 0;
         for (Map.Entry<T, Integer> entry : shoppingBag.entrySet()) {
             T item = entry.getKey();
             Integer quantity = entry.getValue();
-            Integer price = item.getPrice();
-            grandTotal += price.intValue() * quantity;
+            total += item.getPrice() * quantity;
         }
-        return grandTotal;
+        return total;
     }
 }

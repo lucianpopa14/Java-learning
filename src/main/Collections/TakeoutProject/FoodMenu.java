@@ -8,23 +8,23 @@ public class FoodMenu {
 
     public FoodMenu() {
         menu.add(new Food("Spaghetti", "Bolognese", 6));
-        menu.add(new Food("Burger", "tasty with cheese", 7));
+        menu.add(new Food("Burger", "tasty with cheese", 10));
         menu.add(new Food("Salad", "Caesar", 4));
     }
 
     @Override
     public String toString() {
-        String result = "";
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < menu.size(); i++) {
-            Food item = menu.get(i);
-            result += (i + 1) + ". " + item.getName() + " " + item.getDescription() + " €" + item.getPrice() + "\n";
+            sb.append(i + 1).append(". ").append(menu.get(i).toString()).append("\n\n");
         }
-        return result;
+        return sb.toString();
     }
 
     public Food getFood(int index) {
-        if (index > 0 && index<= menu.size()) {
-            return menu.get(index-1);
+        int adjustedIndex = index-1;
+        if (adjustedIndex >= 0 && adjustedIndex< menu.size()) {
+            return menu.get(adjustedIndex);
         } else {
             return null;
         }
