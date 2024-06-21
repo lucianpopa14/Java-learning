@@ -2,7 +2,19 @@ package src.main.mooc.part4;
 
 public class main {
     public static void main(String[] args) {
-        Product newProduct = new Product("banana", 1.1, 13);
-        newProduct.printProduct();
+        Debt mortgage = new Debt(120000.0, 1.2);
+        mortgage.printBalance();
+
+        mortgage.waitOneYear();
+        mortgage.printBalance();
+
+        int years = 0;
+
+        while (years < 20) {
+            mortgage.waitOneYear();
+            years = years + 1;
+        }
+
+        mortgage.printBalance();
     }
 }
