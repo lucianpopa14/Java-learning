@@ -11,7 +11,7 @@ public class RecordsFromAFile {
         System.out.println("name of the file: ");
         String fileName = scanner.nextLine();
 
-            try (Scanner scanner1 = new Scanner(Paths.get("C:/Users/thinkpad/IdeaProjects/Java-learning/src/main/mooc/"+fileName).toAbsolutePath())) {
+            try (Scanner scanner1 = new Scanner(Paths.get("C:/Users/thinkpad/IdeaProjects/Java-learning/src/main/mooc/"+fileName))) {
 
                 while (scanner1.hasNextLine()) {
 
@@ -21,6 +21,8 @@ public class RecordsFromAFile {
 
                     System.out.println(name+", age: "+age);
                 }
+            }catch (Exception e){
+                System.out.println(e);
             }
         }
     }
