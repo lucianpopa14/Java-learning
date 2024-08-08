@@ -1,1 +1,1 @@
-Repo for posting projects that I do while studying Java on Codecademy and from University of Helsinki’s massive open online course
+### Repo for posting projects that I do while studying Java on [Codecademy](https://www.codecademy.com/learn/learn-java) and from [University of Helsinki’s](https://java-programming.mooc.fi/) massive open online course
