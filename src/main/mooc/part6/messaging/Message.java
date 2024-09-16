@@ -24,7 +24,6 @@ public class Message {
         return this.sender + ": " + this.content;
     }
 
-    // created using the "insert code" feature of NetBeans
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
