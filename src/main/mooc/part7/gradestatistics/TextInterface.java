@@ -19,8 +19,10 @@ public class TextInterface {
                 points.addPoints(input);
             } else {
                 System.out.println("Point average (all): " + points.calculateAverage());
-                System.out.println("Point average (passing): "+points.calculatePassingAverage());}
+                System.out.println("Point average (passing): " + points.calculatePassingAverage());
+                System.out.println("Pass percentage: " + points.passingPercentage());
                 break;
             }
         }
     }
+}

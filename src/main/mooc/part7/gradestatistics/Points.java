@@ -35,8 +35,13 @@ public class Points {
         return (double) (sumPassing / count);
     }
 
-//    public double passingPercentage(){
-//
-//    }
-
+    public double passingPercentage() {
+        int count = 0;
+        for (Integer point : points) {
+            if (point >= 50) {
+                count++;
+            }
+        }
+        return 100 * count / points.size();
+    }
 }
