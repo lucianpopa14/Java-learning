@@ -23,4 +23,20 @@ public class Points {
         return (double) sum / points.size();
     }
 
+    public double calculatePassingAverage() {
+        int count = 0;
+        int sumPassing = 0;
+        for (Integer point : points) {
+            if (point >= 50) {
+                sumPassing += point;
+                count++;
+            }
+        }
+        return (double) (sumPassing / count);
+    }
+
+//    public double passingPercentage(){
+//
+//    }
+
 }
