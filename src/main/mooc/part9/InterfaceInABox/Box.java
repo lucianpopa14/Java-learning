@@ -2,7 +2,7 @@ package src.main.mooc.part9.InterfaceInABox;
 
 import java.util.ArrayList;
 
-public class Box {
+public class Box implements Packable{
     private double maxCapacity;
     private ArrayList<Packable> boxContents;
 
@@ -13,23 +13,28 @@ public class Box {
 
     public void add(Packable item) {
         if (item.weight() < maxCapacity) {
-            if (totalWeight(boxContents) < maxCapacity) {
+            if (weight(boxContents) < maxCapacity) {
                 boxContents.add(item);
             }
         }
     }
 
-    public double totalWeight(ArrayList<Packable> boxContents) {
-        double totalWeight = 0;
+    public double weight (ArrayList<Packable> boxContents) {
+        double weight  = 0;
         for (Packable item : boxContents) {
-            totalWeight += item.weight();
+            weight  += item.weight();
         }
-        return totalWeight;
+        return weight ;
     }
 
     @Override
     public String toString() {
         return "Box: " + boxContents.size() + " items, total weight "
-                + totalWeight(boxContents) + " kg";
+                + weight (boxContents) + " kg";
+    }
+
+    @Override
+    public double weight() {
+        return 0;
     }
 }
