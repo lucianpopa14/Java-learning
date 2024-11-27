@@ -83,7 +83,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>mooc.part13.JavaFxApplication</mainClass>
+                    <mainClass>mooc.part13.FirstGUIApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
