@@ -22,12 +22,12 @@ public class TextStatistics extends Application {
         labelsBar.getChildren().add(new Label("Words: 0"));
         labelsBar.getChildren().add(new Label("The longest word is:"));
 
-        Scene view = new Scene(layout, 500, 500);
+        Scene view = new Scene(layout, 500, 200);
         stage.setScene(view);
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch(TextStatistics.class);
+        launch(TextStatisticsV2.class);
     }
 }
