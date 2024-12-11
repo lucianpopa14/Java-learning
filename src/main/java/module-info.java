@@ -6,4 +6,5 @@ module mooc.part13 {
 
     exports mooc.part13;
     exports mooc.part14;
+    exports mooc.part14.asteroidsgame;
 }
